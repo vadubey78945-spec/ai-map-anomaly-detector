@@ -4,7 +4,6 @@ from pathlib import Path
 file = Path(__file__).resolve()
 root = file.parents[1]
 
-root = Path(__file__).resolve().parent.parent
 if str(root) not in sys.path:
     sys.path.insert(0, str(root))
     
@@ -25,7 +24,6 @@ import json
 # Add backend to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 sys.path.append(str(Path(__file__).parent.parent / "backend"))
-
 
 try:
     from backend.wkt_processor import WKTProcessor, create_sample_wkt_files
