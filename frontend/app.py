@@ -4,6 +4,7 @@ from pathlib import Path
 file = Path(__file__).resolve()
 root = file.parents[1]
 
+root = Path(__file__).resolve().parent.parent
 if str(root) not in sys.path:
     sys.path.insert(0, str(root))
     

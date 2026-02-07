@@ -1,5 +1,14 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "frontend/app.py" }
+  "builds": [
+    {
+      "src": "frontend/app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "source": "/(.*)",
+      "destination": "frontend/app.py"
+    }
   ]
 }
