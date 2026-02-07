@@ -25,11 +25,6 @@ import json
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 sys.path.append(str(Path(__file__).parent.parent / "backend"))
 
-#file = Path(__file__).resolve()
-#root = file.parents[1]
-
-#if str(root) not in sys.path:
-#    sys.path.insert(0, str(root))
 
 try:
     from backend.wkt_processor import WKTProcessor, create_sample_wkt_files
